@@ -2,6 +2,7 @@ package com.library.app.service;
 
 import com.library.app.dao.BookRepository;
 import com.library.app.model.Book;
+import com.library.app.request.BookBorrowRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,4 +22,5 @@ public class BookService {
     public Optional<Book> getBookById(long id) {
         return Optional.of(bookRepository.findById(id).get());
     }
+
 }

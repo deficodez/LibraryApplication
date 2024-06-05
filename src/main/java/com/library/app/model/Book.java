@@ -27,4 +27,12 @@ public class Book {
     @Column(nullable = false)
     private int copies;
 
+    public void decrementCopies() {
+        if (copies > 0) {
+            this.copies--;
+        } else {
+            throw new RuntimeException("No copies available");
+        }
+    }
+
 }
